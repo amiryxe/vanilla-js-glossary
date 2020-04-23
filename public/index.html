@@ -11,12 +11,12 @@
       افزودن
     </a>
 
-    <div class="modal is-active">
-      <div class="modal-background"></div>
+    <div class="modal" id="addModal">
+      <div class="modal-background closeModal"></div>
       <div class="modal-card">
         <header class="modal-card-head">
           <p class="modal-card-title">افزودن واژه جدید</p>
-          <button class="delete" aria-label="close"></button>
+          <button class="delete closeModal" aria-label="close"></button>
         </header>
         <section class="modal-card-body">
           <form id="addForm">
@@ -46,7 +46,7 @@
             </section>
             <footer class="modal-card-foot">
               <button class="button is-success">افزودن</button>
-              <button class="button">انصراف</button>
+              <button class="button closeModal">انصراف</button>
             </footer>
           </form>
       </div>
