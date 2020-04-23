@@ -4,4 +4,4 @@ import './styles/main.scss';
 
 import add from './add';
 
-console.log(add());
+add();

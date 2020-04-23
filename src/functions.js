@@ -1,3 +1,8 @@
-console.log('hi from function.js');
-
-alert('fn');
+let words = [
+  {
+    title: '',
+    meaning: '',
+    created: '',
+    updated: '',
+  },
+];
