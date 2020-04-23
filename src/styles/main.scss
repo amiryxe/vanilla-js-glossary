@@ -6,3 +6,13 @@ body,
 input {
   font-family: 'Vazir';
 }
+
+.add-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+
+  svg {
+    margin-left: 10px;
+  }
+}
