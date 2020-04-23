@@ -19,3 +19,9 @@ Simple Glossary maked by vanilla JS for my English to Persian words
 `npm install style-loader css-loader`
 
 `npm install bulma`
+
+`npm install sass-loader sass --save-dev`
+
+`npm install url-loader`
+
+`npm install vazir-font`

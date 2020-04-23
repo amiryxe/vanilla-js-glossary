@@ -1,5 +1,7 @@
+import 'vazir-font/dist/font-face.css';
 import 'bulma/css/bulma.css';
-import add from './add';
 import './styles/main.scss';
+
+import add from './add';
 
 console.log(add());
