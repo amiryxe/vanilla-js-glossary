@@ -4,7 +4,7 @@
   "description": "a simple glossary  project for vanilla js",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/amirsaa/Simple-JS-Glossary#readme",
   "dependencies": {
+    "@babel/core": "^7.9.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   }
