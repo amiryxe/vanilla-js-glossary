@@ -11,6 +11,47 @@
       افزودن
     </a>
 
+    <div class="modal is-active">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">افزودن واژه جدید</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <form id="addForm">
+            <div class="field">
+                <label class="label" for="word_title">واژه</label>
+                <div class="control">
+                  <input
+                    id="word_title"
+                    class="input"
+                    type="text"
+                    placeholder="خود واژه را وارد کنید"
+                  />
+                </div>
+              </div>
+    
+              <div class="field">
+                <label class="label" for="word_meaning">معنی</label>
+                <div class="control">
+                  <input
+                    id="word_meaning"
+                    class="input"
+                    type="text"
+                    placeholder="معنی آن را وارد کنید"
+                  />
+                </div>
+              </div>
+            </section>
+            <footer class="modal-card-foot">
+              <button class="button is-success">افزودن</button>
+              <button class="button">انصراف</button>
+            </footer>
+          </form>
+      </div>
+    </div>
+
     <div class="container column is-half is-offset-one-quarter">
       <div class="field">
         <label class="label">جستجو در واژه‌ها</label>

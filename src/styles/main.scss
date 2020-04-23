@@ -3,7 +3,8 @@ html {
 }
 
 body,
-input {
+input,
+button {
   font-family: 'Vazir';
 }
 
@@ -15,4 +16,9 @@ input {
   svg {
     margin-left: 10px;
   }
+}
+
+.modal-card-foot .button:not(:last-child) {
+  margin-right: 0;
+  margin-left: 0.5em;
 }
