@@ -1,0 +1,19 @@
+{
+  "name": "simple-js-glossary",
+  "version": "1.0.0",
+  "description": "a simple glossary  project for vanilla js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirsaa/Simple-JS-Glossary.git"
+  },
+  "author": "Amir Salehi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirsaa/Simple-JS-Glossary/issues"
+  },
+  "homepage": "https://github.com/amirsaa/Simple-JS-Glossary#readme"
+}
