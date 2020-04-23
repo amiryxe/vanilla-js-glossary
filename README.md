@@ -1,6 +1,6 @@
 # Simple-JS-Glossary
 
-Simple Glossary maked by vanilla JS for my English to Persian words
+Simple Glossary maked by vanilla JS for My personal words. It can insert new words and manage them.
 
 ## Run:
 
