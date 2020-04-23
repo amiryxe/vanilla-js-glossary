@@ -1,3 +1,1 @@
-class Test {
-  constructor() {}
-}
+document.write('Hello from index.js File!');
