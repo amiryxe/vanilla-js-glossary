@@ -15,3 +15,7 @@ Simple Glossary maked by vanilla JS for my English to Persian words
 `npm install babel-preset-env babel-loader@7 babel-core`
 
 `npm install webpack-dev-server`
+
+`npm install style-loader css-loader`
+
+`npm install bulma`
