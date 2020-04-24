@@ -45,12 +45,15 @@ const cardTemplate = `
 export const renderWords = (words, filters) => {
   const htmlWordList = document.querySelector('#words_list');
   htmlWordList.innerHTML = '';
+
   words.forEach((item) => {
-    const itemBox = document.createElement('div');
-    itemBox.innerHTML = cardTemplate;
-    itemBox.querySelector('.card-header-title').textContent = item.title;
-    itemBox.querySelector('.content').textContent = item.meaning;
-    itemBox.querySelector('.card-header-icon').textContent = item.created;
-    htmlWordList.appendChild(itemBox);
+    if (item.title.toLowerCase().includes(filters.searchTitle)) {
+      const itemBox = document.createElement('div');
+      itemBox.innerHTML = cardTemplate;
+      itemBox.querySelector('.card-header-title').textContent = item.title;
+      itemBox.querySelector('.content').textContent = item.meaning;
+      itemBox.querySelector('.card-header-icon').textContent = item.created;
+      htmlWordList.appendChild(itemBox);
+    }
   });
 };

@@ -5,6 +5,11 @@ import './styles/main.scss';
 import add from './add';
 import { words, renderWords } from './functions';
 
+// filters
+let filters = {
+  searchTitle: '',
+};
+
 // Open/Close Add Modal
 document.querySelector('.add-btn').addEventListener('click', () => {
   document.querySelector('#addModal').classList.add('is-active');
@@ -24,7 +29,14 @@ document.querySelector('#addForm').addEventListener('submit', (e) => {
   add(title, meaning);
 });
 
+// Search
+document.querySelector('#search_field').addEventListener('input', (e) => {
+  filters.searchTitle = e.target.value.toLowerCase();
+
+  renderWords(words, filters);
+});
+
 // Show Words
 if (localStorage.getItem('words')) {
-  renderWords(words, '');
+  renderWords(words, filters);
 }
