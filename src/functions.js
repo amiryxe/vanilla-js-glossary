@@ -1,4 +1,4 @@
-let words = [
+export let words = [
   {
     title: '',
     meaning: '',
