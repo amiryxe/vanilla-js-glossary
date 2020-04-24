@@ -30,7 +30,7 @@ const cardTemplate = `
     <div class="content"></div>
   </div>
   <footer class="card-footer">
-    <a href="#" class="card-footer-item">
+    <a href="#" class="card-footer-item edit-link">
       <i class="fa fa-edit has-text-info" style="margin-left: 10px;"></i>
       ویرایش
     </a>
@@ -57,6 +57,7 @@ export const renderWords = (words, filters) => {
       itemBox.querySelector('.card-header-title').textContent = item.title;
       itemBox.querySelector('.content').textContent = item.meaning;
       itemBox.querySelector('.card-header-icon').textContent = item.created;
+      itemBox.querySelector('.edit-link').href = `./edit-word.html#${item.id}`;
       itemBox.querySelector('.delete-btn').addEventListener('click', (e) => {
         e.preventDefault();
         deleteWord(item.id);
