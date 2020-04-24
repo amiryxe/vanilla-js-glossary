@@ -25,3 +25,5 @@ Simple Glossary maked by vanilla JS for My personal words. It can insert new wor
 `npm install url-loader`
 
 `npm install vazir-font`
+
+`npm install uuid`
