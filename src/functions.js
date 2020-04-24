@@ -4,17 +4,11 @@ export let words = [];
 const cardTemplate = `
   <div class="card" style="margin-bottom: 1rem">
         <header class="card-header">
-          <p class="card-header-title">
-            عنوان کلمه در اینجا
-          </p>
-          <span class="card-header-icon">
-            11:09 PM - 1 Jan 2016
-          </span>
+          <p class="card-header-title"></p>
+          <span class="card-header-icon"></span>
         </header>
         <div class="card-content">
-          <div class="content">
-            معنی کلمه در اینجا
-          </div>
+          <div class="content"></div>
         </div>
         <footer class="card-footer">
           <a href="#" class="card-footer-item">
@@ -41,6 +35,7 @@ export const renderWords = (words, filters) => {
     itemBox.innerHTML = cardTemplate;
     itemBox.querySelector('.card-header-title').textContent = item.title;
     itemBox.querySelector('.content').textContent = item.meaning;
+    itemBox.querySelector('.card-header-icon').textContent = item.created;
     htmlWordList.appendChild(itemBox);
   });
 };
