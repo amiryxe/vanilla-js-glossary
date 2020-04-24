@@ -1,3 +1,5 @@
+import moment from 'jalali-moment';
+
 // Get words
 const getWords = () => {
   const wordsJson = localStorage.getItem('words');
@@ -56,7 +58,11 @@ export const renderWords = (words, filters) => {
       itemBox.innerHTML = cardTemplate;
       itemBox.querySelector('.card-header-title').textContent = item.title;
       itemBox.querySelector('.content').textContent = item.meaning;
-      itemBox.querySelector('.card-header-icon').textContent = item.created;
+      itemBox.querySelector('.card-header-icon').textContent = moment(
+        item.created
+      )
+        .locale('fa')
+        .format('YYYY/M/D');
       itemBox.querySelector('.edit-link').href = `./edit-word.html#${item.id}`;
       itemBox.querySelector('.delete-btn').addEventListener('click', (e) => {
         e.preventDefault();
