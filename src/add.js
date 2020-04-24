@@ -1,4 +1,4 @@
-import { words } from './functions';
+import { words, renderWords } from './functions';
 import { v4 as uuidv4 } from 'uuid';
 
 const addWord = (title, meaning) => {
@@ -9,7 +9,7 @@ const addWord = (title, meaning) => {
     created: '',
     updated: '',
   });
-  console.log(words);
+  renderWords(words, '');
 };
 
 export default addWord;

@@ -18,7 +18,7 @@ document.querySelectorAll('.closeModal').forEach((item) => {
 // Add Word
 document.querySelector('#addForm').addEventListener('submit', (e) => {
   e.preventDefault();
-  const title = e.target.elements.wordMeaning.value;
-  const meaning = e.target.elements.wordTitle.value;
+  const title = e.target.elements.wordTitle.value;
+  const meaning = e.target.elements.wordMeaning.value;
   add(title, meaning);
 });
