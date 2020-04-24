@@ -27,3 +27,7 @@ Simple Glossary maked by vanilla JS for My personal words. It can insert new wor
 `npm install vazir-font`
 
 `npm install uuid`
+
+`npm install moment --save`
+
+`npm install jalali-moment -S`
