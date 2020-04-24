@@ -10,6 +10,10 @@ const getWords = () => {
 
 export let words = getWords();
 
+export let filters = {
+  searchTitle: '',
+};
+
 // Save words to storage
 export const saveWords = (words) => {
   localStorage.setItem('words', JSON.stringify(words));

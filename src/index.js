@@ -3,12 +3,7 @@ import 'bulma/css/bulma.css';
 import './styles/main.scss';
 
 import add from './add';
-import { words, renderWords } from './functions';
-
-// filters
-let filters = {
-  searchTitle: '',
-};
+import { words, renderWords, filters } from './functions';
 
 // Open/Close Add Modal
 document.querySelector('.add-btn').addEventListener('click', () => {
