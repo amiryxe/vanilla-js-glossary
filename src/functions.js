@@ -1,4 +1,19 @@
-export let words = [];
+// Get words
+const getWords = () => {
+  const cachedWords = JSON.parse(localStorage.getItem('words'));
+  if (cachedWords) {
+    return cachedWords;
+  } else {
+    return [];
+  }
+};
+
+export let words = getWords();
+
+// Save words to storage
+export const saveWords = (words) => {
+  localStorage.setItem('words', JSON.stringify(words));
+};
 
 // Card Template
 const cardTemplate = `

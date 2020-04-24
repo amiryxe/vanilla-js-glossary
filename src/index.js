@@ -3,6 +3,7 @@ import 'bulma/css/bulma.css';
 import './styles/main.scss';
 
 import add from './add';
+import { words, renderWords } from './functions';
 
 // Open/Close Add Modal
 document.querySelector('.add-btn').addEventListener('click', () => {
@@ -22,3 +23,8 @@ document.querySelector('#addForm').addEventListener('submit', (e) => {
   const meaning = e.target.elements.wordMeaning.value;
   add(title, meaning);
 });
+
+// Show Words
+if (localStorage.getItem('words')) {
+  renderWords(words, '');
+}
