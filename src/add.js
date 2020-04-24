@@ -1,15 +1,4 @@
-const addWord = () => {
-  // Open/Close Add Modal
-  document.querySelector('.add-btn').addEventListener('click', () => {
-    document.querySelector('#addModal').classList.add('is-active');
-  });
-
-  document.querySelectorAll('.closeModal').forEach((item) => {
-    item.addEventListener('click', () => {
-      document.querySelector('#addModal').classList.remove('is-active');
-    });
-  });
-
+const addWord = (word, meaning) => {
   // Card Template
   const cardTemplate = `
   <div class="card">
@@ -43,12 +32,7 @@ const addWord = () => {
     </div>
   `;
 
-  // Add Word
-  document.querySelector('#addForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log(e.target.elements.wordMeaning.value);
-    console.log(e.target.elements.wordTitle.value);
-  });
+  console.log(`word is ${word} and mean is ${meaning}`);
 };
 
 export default addWord;
