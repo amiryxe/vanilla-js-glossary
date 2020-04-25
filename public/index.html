@@ -54,6 +54,53 @@
       </div>
     </div>
 
+
+
+    <div class="modal" id="editModal">
+      <div class="modal-background closeModal"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">ویرایش واژه: </p>
+          <button class="delete closeModal" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <form id="submitEdit">
+            <div class="field">
+                <label class="label" for="word_title">واژه</label>
+                <div class="control">
+                  <input
+                    name="wordTitle"
+                    id="word_title"
+                    class="input"
+                    type="text"
+                    placeholder="خود واژه را وارد کنید"
+                  />
+                </div>
+              </div>
+    
+              <div class="field">
+                <label class="label" for="word_meaning">معنی</label>
+                <div class="control">
+                  <input
+                    name="wordMeaning"
+                    id="word_meaning"
+                    class="input"
+                    type="text"
+                    placeholder="معنی آن را وارد کنید"
+                  />
+                </div>
+              </div>
+            </section>
+            <footer class="modal-card-foot">
+              <button class="button is-info closeModal">ویرایش</button>
+              <button type="button" class="button closeModal">انصراف</button>
+            </footer>
+          </form>
+      </div>
+    </div>
+
+
+
     <div class="container column is-half is-offset-one-quarter">
       <div class="field">
         <label class="label">جستجو در واژه‌ها</label>

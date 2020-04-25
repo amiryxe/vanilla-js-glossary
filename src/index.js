@@ -3,6 +3,7 @@ import 'bulma/css/bulma.css';
 import './styles/main.scss';
 
 import add from './add';
+import edit from './edit';
 import { words, renderWords, filters } from './functions';
 
 // Show Words
@@ -23,25 +24,21 @@ document.querySelectorAll('.closeModal').forEach((item) => {
 
 document.querySelectorAll('.edit-modal').forEach((item) => {
   item.addEventListener('click', (e) => {
+    e.preventDefault();
     const itemId = e.target.id;
     words.forEach((item) => {
       if (item.id === itemId) {
-        const modal = document.querySelector('#addModal');
+        const modal = document.querySelector('#editModal');
         modal.classList.add('is-active');
         modal.querySelector('#word_title').value = item.title;
         modal.querySelector('#word_meaning').value = item.meaning;
-        modal.querySelector('.is-success').textContent = 'ویرایش';
-        modal
-          .querySelector('.is-success')
-          .classList.replace('is-success', 'is-info');
-        // modal.querySelector('form').id = 'editModal';
-        // document.querySelector('#editModal').addEventListener('submit', (e) => {
-        //   e.target.elements.wordTitle.value = item.title;
-        //   e.target.elements.wordMeaning.value = item.meaning;
-        //   add(title, meaning);
-        //   e.target.elements.wordTitle.value = '';
-        //   e.target.elements.wordMeaning.value = '';
-        // });
+
+        modal.querySelector('#submitEdit').addEventListener('submit', (e) => {
+          e.preventDefault();
+          const title = e.target.elements.wordTitle.value;
+          const meaning = e.target.elements.wordMeaning.value;
+          edit(item.id, title, meaning);
+        });
       }
     });
   });
