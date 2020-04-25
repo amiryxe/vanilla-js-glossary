@@ -19,6 +19,7 @@ document.querySelector('.add-btn').addEventListener('click', () => {
 document.querySelectorAll('.closeModal').forEach((item) => {
   item.addEventListener('click', () => {
     document.querySelector('#addModal').classList.remove('is-active');
+    document.querySelector('#editModal').classList.remove('is-active');
   });
 });
 
