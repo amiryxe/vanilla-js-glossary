@@ -30,8 +30,8 @@ document.querySelectorAll('.edit-modal').forEach((item) => {
       if (item.id === itemId) {
         const modal = document.querySelector('#editModal');
         modal.classList.add('is-active');
-        modal.querySelector('#word_title').value = item.title;
-        modal.querySelector('#word_meaning').value = item.meaning;
+        modal.querySelector('#word_title_edit').value = item.title;
+        modal.querySelector('#word_meaning_edit').value = item.meaning;
 
         modal.querySelector('#submitEdit').addEventListener('submit', (e) => {
           e.preventDefault();
