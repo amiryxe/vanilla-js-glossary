@@ -22,6 +22,8 @@ document.querySelector('#addForm').addEventListener('submit', (e) => {
   const title = e.target.elements.wordTitle.value;
   const meaning = e.target.elements.wordMeaning.value;
   add(title, meaning);
+  e.target.elements.wordTitle.value = '';
+  e.target.elements.wordMeaning.value = '';
 });
 
 // Search
