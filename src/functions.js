@@ -32,7 +32,7 @@ const cardTemplate = `
     <div class="content"></div>
   </div>
   <footer class="card-footer">
-    <a href="#" class="card-footer-item edit-link">
+    <a href="#" class="card-footer-item edit-modal">
       <i class="fa fa-edit has-text-info" style="margin-left: 10px;"></i>
       ویرایش
     </a>
@@ -58,12 +58,12 @@ export const renderWords = (words, filters) => {
       itemBox.innerHTML = cardTemplate;
       itemBox.querySelector('.card-header-title').textContent = item.title;
       itemBox.querySelector('.content').textContent = item.meaning;
+      itemBox.querySelector('.edit-modal').id = item.id;
       itemBox.querySelector('.card-header-icon').textContent = moment(
         item.created
       )
         .locale('fa')
         .format('YYYY/M/D');
-      itemBox.querySelector('.edit-link').href = `./edit-word.html#${item.id}`;
       itemBox.querySelector('.delete-btn').addEventListener('click', (e) => {
         e.preventDefault();
         deleteWord(item.id);
