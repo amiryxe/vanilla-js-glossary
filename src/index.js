@@ -3,8 +3,7 @@ import 'bulma/css/bulma.css';
 import './styles/main.scss';
 
 import add from './add';
-import edit from './edit';
-import { words, renderWords, filters } from './functions';
+import { words, renderWords, filters, sortWords } from './functions';
 
 // Show Words
 if (localStorage.getItem('words')) {
@@ -37,5 +36,12 @@ document.querySelector('#addForm').addEventListener('submit', (e) => {
 document.querySelector('#search_field').addEventListener('input', (e) => {
   filters.searchTitle = e.target.value.toLowerCase();
 
+  renderWords(words, filters);
+});
+
+// Sort Select
+document.querySelector('#sort').addEventListener('change', (e) => {
+  filters.sortBy = e.target.value;
+  sortWords(words, filters.sortBy);
   renderWords(words, filters);
 });

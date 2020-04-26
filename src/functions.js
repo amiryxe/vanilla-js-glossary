@@ -15,6 +15,7 @@ export let words = getWords();
 
 export let filters = {
   searchTitle: '',
+  sortBy: 'byCreated',
 };
 
 // Save words to storage
@@ -53,6 +54,9 @@ export const renderWords = (words, filters) => {
   const htmlWordList = document.querySelector('#words_list');
   htmlWordList.innerHTML = '';
 
+  sortWords(words, filters.sortBy);
+
+  // set data to card
   words.forEach((item) => {
     if (item.title.toLowerCase().includes(filters.searchTitle)) {
       const itemBox = document.createElement('div');
@@ -76,14 +80,15 @@ export const renderWords = (words, filters) => {
           .fromNow()}</p>`;
       }
 
+      // delete
       itemBox.querySelector('.delete-btn').addEventListener('click', (e) => {
         e.preventDefault();
         deleteWord(item.id);
       });
 
+      // edit
       itemBox.querySelector('.edit-modal').addEventListener('click', (e) => {
         e.preventDefault();
-        const itemId = e.target.id;
 
         const modal = document.querySelector('#editModal');
         modal.classList.add('is-active');
@@ -110,4 +115,31 @@ const deleteWord = (id) => {
 
   saveWords(words);
   renderWords(words, filters);
+};
+
+// Sort
+export const sortWords = (words, sortBy) => {
+  if (sortBy === 'byEdited') {
+    return words.sort((a, b) => {
+      if (a.updated > b.updated) {
+        return -1;
+      } else if (a.updated > b.updated) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+  } else if (sortBy === 'byCreated') {
+    return words.sort((a, b) => {
+      if (a.created > b.created) {
+        return -1;
+      } else if (a.created > b.created) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+  } else {
+    return words;
+  }
 };
