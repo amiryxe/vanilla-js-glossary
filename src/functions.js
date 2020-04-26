@@ -1,4 +1,5 @@
 import moment from 'jalali-moment';
+import edit from './edit';
 
 // Get words
 const getWords = () => {
@@ -64,10 +65,37 @@ export const renderWords = (words, filters) => {
       )
         .locale('fa')
         .format('YYYY/M/D');
+
+      if (item.created < item.updated) {
+        itemBox.querySelector(
+          '.content'
+        ).innerHTML += `<p>آخرین تغییر در ${moment(timestamp)
+          .locale('fa')
+          .fromNow()}</p>`;
+      }
+
       itemBox.querySelector('.delete-btn').addEventListener('click', (e) => {
         e.preventDefault();
         deleteWord(item.id);
       });
+
+      itemBox.querySelector('.edit-modal').addEventListener('click', (e) => {
+        e.preventDefault();
+        const itemId = e.target.id;
+
+        const modal = document.querySelector('#editModal');
+        modal.classList.add('is-active');
+        modal.querySelector('#word_title_edit').value = item.title;
+        modal.querySelector('#word_meaning_edit').value = item.meaning;
+
+        modal.querySelector('#submitEdit').addEventListener('submit', (e) => {
+          e.preventDefault();
+          const title = e.target.elements.wordTitle.value;
+          const meaning = e.target.elements.wordMeaning.value;
+          edit(item.id, title, meaning);
+        });
+      });
+
       htmlWordList.appendChild(itemBox);
     }
   });
