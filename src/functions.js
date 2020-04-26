@@ -55,7 +55,6 @@ export const renderWords = (words, filters) => {
   htmlWordList.innerHTML = '';
 
   sortWords(words, filters.sortBy);
-
   // set data to card
   words.forEach((item) => {
     if (item.title.toLowerCase().includes(filters.searchTitle)) {
@@ -119,7 +118,7 @@ const deleteWord = (id) => {
 
 // Sort
 export const sortWords = (words, sortBy) => {
-  if (sortBy === 'byEdited') {
+  if (sortBy === 'byUpdated') {
     return words.sort((a, b) => {
       if (a.updated > b.updated) {
         return -1;
@@ -138,6 +137,16 @@ export const sortWords = (words, sortBy) => {
       } else {
         return 0;
       }
+    });
+  } else if (sortBy === 'byAlphabet') {
+    return words.sort((a, b) => {
+      if (a.title < b.title) {
+        return -1;
+      }
+      if (a.title > b.title) {
+        return 1;
+      }
+      return 0;
     });
   } else {
     return words;
