@@ -69,7 +69,9 @@ export const renderWords = (words, filters) => {
       if (item.created < item.updated) {
         itemBox.querySelector(
           '.content'
-        ).innerHTML += `<p>آخرین تغییر در ${moment(timestamp)
+        ).innerHTML += `<p class="last-updated">آخرین تغییر در ${moment(
+          item.updated
+        )
           .locale('fa')
           .fromNow()}</p>`;
       }
