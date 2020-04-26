@@ -3,7 +3,7 @@ import 'bulma/css/bulma.css';
 import './styles/main.scss';
 
 import add from './add';
-import { words, renderWords, filters, sortWords } from './functions';
+import { words, renderWords, filters, sortWords, saveWords } from './functions';
 
 // Show Words
 if (localStorage.getItem('words')) {
@@ -44,4 +44,5 @@ document.querySelector('#sort').addEventListener('change', (e) => {
   filters.sortBy = e.target.value;
   sortWords(words, filters.sortBy);
   renderWords(words, filters);
+  saveWords(words);
 });

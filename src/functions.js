@@ -122,21 +122,19 @@ export const sortWords = (words, sortBy) => {
     return words.sort((a, b) => {
       if (a.updated > b.updated) {
         return -1;
-      } else if (a.updated > b.updated) {
+      } else if (a.updated < b.updated) {
         return 1;
-      } else {
-        return 0;
       }
+      return 0;
     });
   } else if (sortBy === 'byCreated') {
     return words.sort((a, b) => {
       if (a.created > b.created) {
         return -1;
-      } else if (a.created > b.created) {
+      } else if (a.created < b.created) {
         return 1;
-      } else {
-        return 0;
       }
+      return 0;
     });
   } else if (sortBy === 'byAlphabet') {
     return words.sort((a, b) => {
@@ -148,7 +146,6 @@ export const sortWords = (words, sortBy) => {
       }
       return 0;
     });
-  } else {
-    return words;
   }
+  return words;
 };
