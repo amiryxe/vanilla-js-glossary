@@ -13,6 +13,7 @@ select {
   position: fixed;
   left: 20px;
   bottom: 20px;
+  z-index: 2;
 
   svg {
     margin-left: 10px;
