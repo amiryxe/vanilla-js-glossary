@@ -4,7 +4,8 @@
   "description": "a simple glossary  project for vanilla js",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
