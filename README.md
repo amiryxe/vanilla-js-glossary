@@ -1,6 +1,6 @@
-# Simple-JS-Glossary
+# Vanilla JS Glossary
 
-Simple Glossary maked by vanilla JS for My personal words. It can insert new words and manage them.
+Glossary maked by vanilla JS for add personal words. It can insert new words and manage them.
 
 ## Run:
 
