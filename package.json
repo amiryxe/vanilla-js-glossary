@@ -21,7 +21,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "bulma": "^0.8.2",
-    "css-loader": "^3.5.2",
+    "css-loader": "^7.1.2",
     "jalali-moment": "^3.3.3",
     "moment": "^2.29.4",
     "style-loader": "^1.1.4",
