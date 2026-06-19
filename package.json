@@ -30,7 +30,7 @@
     "vazir-font": "^24.2.0",
     "webpack": "^5.107.2",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^5.2.4"
+    "webpack-dev-server": "^5.2.5"
   },
   "devDependencies": {
     "@babel/core": "^8.0.1",
