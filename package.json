@@ -23,7 +23,7 @@
     "bulma": "^0.8.2",
     "css-loader": "^7.1.2",
     "jalali-moment": "^3.3.3",
-    "moment": "^2.29.4",
+    "moment": "^2.31.0",
     "style-loader": "^1.1.4",
     "url-loader": "^4.1.0",
     "uuid": "^14.0.0",
